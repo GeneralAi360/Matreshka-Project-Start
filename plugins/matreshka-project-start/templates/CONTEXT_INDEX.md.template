@@ -1,0 +1,11 @@
+# Context index
+
+| Area | Read this first | Use when |
+| --- | --- | --- |
+| Overall project | `AGENTS.md`, `docs/project/PROJECT_PROFILE.md` | Starting any material task |
+| Product behavior | `docs/specs/` | Clarifying what must be true |
+| Implementation | `docs/plans/` | Changing an approved feature |
+| Decisions | `docs/project/DECISIONS.md` | A prior choice affects work |
+| Operations | `docs/runbooks/` | Running, verifying or releasing a service |
+
+Add project-specific entries only after their sources are confirmed.
