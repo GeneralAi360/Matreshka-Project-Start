@@ -1,44 +1,80 @@
 # Matreshka Project Start
 
-Matreshka Project Start is a Codex plugin for beginning a software project in a controlled way. It works with a new folder or an existing repository and does not assume a particular stack.
+**Matreshka Project Start** prepares a new or existing repository for predictable AI-assisted development. It is a project-foundation plugin, not a Vue, Next.js, or NestJS application template.
 
-It helps a person and an AI coding agent move through one predictable path:
+It supports the same working logic across Codex, Claude Code, Antigravity and optional Pi:
 
 ```text
-discover the project → agree the setup → make approved changes → verify readiness
+read-only discovery → approved specification → implementation plan
+→ focused change + tests → independent review → verified handoff
 ```
 
-The plugin does not create a generic application template. It first learns the actual project structure, protects existing work, and distinguishes verified facts from assumptions.
+The plugin does not make project changes just because an agent was asked to inspect or explain something. Every material write has an approval boundary.
 
-## Included skills
+## What is inside
 
-| Skill | What it does |
+### Seven skills
+
+| Skill | Purpose |
 | --- | --- |
-| `project-discovery` | Safely maps a repository, its stack, instructions, quality commands, and risks. |
-| `project-start` | Coordinates discovery, a short intake, and a bounded setup proposal. |
-| `project-setup` | Applies only the specific project files the user has explicitly approved. |
-| `project-readiness` | Checks that the agreed project foundation is present and usable. |
+| `project-discovery` | Read-only map of the repository, stack, commands, instructions and risks. |
+| `project-start` | Coordinates discovery, a short intake and a bounded setup proposal. |
+| `project-setup` | Applies only an explicitly approved project foundation. |
+| `project-readiness` | Read-only readiness check after setup. |
+| `project-agent-system` | Proposes or installs the approved specialist-agent contracts. |
+| `project-runtime-setup` | Proposes or installs safe local run, status and log conventions. |
+| `project-adapter-setup` | Adds thin, optional adapters for Codex, Claude Code, Antigravity or Pi. |
+
+### Specialist agent contracts
+
+The `agents/` folder defines what each role may read, change, run and return. The contracts are tool-neutral, so one workflow can be used with different coding environments.
+
+| Role | Default authority |
+| --- | --- |
+| `repo-scout` | Read-only repository investigation. |
+| `spec-writer` | Requirements and acceptance criteria; no code. |
+| `planner` | Implementation plan; no code. |
+| `implementer` | Approved scoped code and tests; no Git or deployment. |
+| `test-runner` | Runs declared checks and reports evidence; no fixes. |
+| `browser-checker` | Browser-only functional check; no source changes. |
+| `reviewer` | Independent specification and diff review. |
+| `security-reviewer` | Auth, permissions, input, secrets and external-action review. |
+| `docs-maintainer` | Documentation only, after GREEN and review. |
+| `deployer` | Explicitly approved environment release only. |
+| `deploy-verifier` | Read-only smoke and health verification. |
+
+The files are **instructions and handoff contracts**. They do not magically grant a coding tool access to a browser, server, GitHub or production. The chosen environment and the project owner must separately configure tools and permissions.
+
+## Structure
+
+```text
+plugins/matreshka-project-start/
+├── agents/                  # Specialist role contracts
+├── adapters/                # Thin integration guidance for each coding environment
+├── skills/                  # User-invoked Project Start workflows
+├── templates/               # Stack-neutral project files created only after approval
+├── workflows/               # Feature delivery and permission gates
+└── .codex-plugin/plugin.json
+```
+
+## Recommended first use
+
+Open the intended repository in your coding environment and run:
+
+```text
+Use Matreshka Project Start / project-discovery.
+Inspect this project in read-only mode and show the exact setup proposal.
+Do not change files.
+```
+
+After you approve the resulting file list, use `project-setup`, then (when needed) `project-agent-system`, `project-runtime-setup`, and `project-adapter-setup`.
 
 ## Safety model
 
-- Discovery is read-only by default.
-- No dependency installation, source-code changes, database changes, deployment, Git commit, push, or secret access occurs without separate permission.
-- Existing documentation and agent instructions are preserved and extended only when approved.
-- The plugin never invents project commands, architecture, owners, URLs, or environment values.
-
-## Example prompts
-
-```text
-Use Matreshka Project Start. Inspect this project in read-only mode and show a safe setup proposal. Do not change files.
-```
-
-```text
-Use project-setup. I confirm the setup scope: create AGENTS.md and docs/project only. Do not alter code, CI, Git, or deployment settings.
-```
-
-## Repository layout
-
-The plugin is stored under `plugins/matreshka-project-start`. The repository also contains a Codex marketplace manifest in `.agents/plugins/marketplace.json`.
+- Discovery, planning, review and verification are read-only by default.
+- No dependency installation, source-code change, database migration, Git action, deployment, or secret access occurs without separate permission.
+- `docs-maintainer` runs only after tests are GREEN and independent review is complete.
+- Deployment requires the selected environment, release reference, rollback method and explicit approval.
 
 ## License
 
