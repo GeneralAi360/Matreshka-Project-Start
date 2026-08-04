@@ -1,0 +1,34 @@
+# Project profile
+
+> This file is a factual map. Mark information not confirmed from the repository or owner as `Unknown`.
+
+## Purpose and users
+
+- Purpose: Unknown
+- Users: Unknown
+
+## Stack and layout
+
+- Package manager: Unknown
+- Applications/packages: Unknown
+- Data store and migrations: Unknown
+- Deployment environments: Unknown
+
+## Verified commands
+
+| Purpose | Command | Source |
+| --- | --- | --- |
+| Install | Unknown | — |
+| Lint | Unknown | — |
+| Typecheck | Unknown | — |
+| Unit tests | Unknown | — |
+| Integration tests | Unknown | — |
+| E2E tests | Unknown | — |
+| Build | Unknown | — |
+
+## Important boundaries
+
+- Authentication and authorization: Unknown
+- Sensitive data and secrets: Unknown
+- External systems: Unknown
+- Production and rollback: Unknown
