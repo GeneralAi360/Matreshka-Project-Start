@@ -1,7 +1,7 @@
 {
   "name": "matreshka-project-start",
-  "version": "0.1.0",
-  "description": "Prepare software projects for safe, predictable AI-assisted development.",
+  "version": "0.2.0",
+  "description": "Prepare projects with specialist-agent contracts, safe workflows and coding-environment adapters.",
   "author": {
     "name": "GeneralAi360",
     "url": "https://github.com/GeneralAi360"
@@ -11,20 +11,24 @@
   "keywords": [
     "project setup",
     "ai agents",
+    "agent roles",
     "documentation",
-    "quality"
+    "quality",
+    "nextjs",
+    "react"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Matreshka Project Start",
-    "shortDescription": "Prepare projects for safe AI-assisted development.",
-    "longDescription": "A guided, stack-neutral foundation for starting, organizing, and verifying software projects with AI coding agents.",
+    "shortDescription": "Set up project rules, AI-agent roles and verified workflows.",
+    "longDescription": "A guided, stack-neutral foundation for preparing and operating software projects with specialist AI-agent roles, quality checks and adapters for coding environments.",
     "developerName": "GeneralAi360",
     "category": "Productivity",
     "capabilities": ["Planning", "Write"],
     "defaultPrompt": [
       "Inspect this project without changing files and propose a setup plan.",
       "Prepare this approved project foundation; show the file list first.",
+      "Propose the smallest useful agent-role system for this project.",
       "Check whether this project is ready for safe AI-assisted development."
     ],
     "brandColor": "#4C3B8F"
