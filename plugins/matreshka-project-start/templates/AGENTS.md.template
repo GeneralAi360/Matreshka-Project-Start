@@ -1,0 +1,31 @@
+# Project instructions
+
+## Repository map
+
+- Purpose: `Needs confirmation`
+- Stack: `Needs confirmation`
+- Main application paths: `Needs confirmation`
+- Longer project context: `docs/project/PROJECT_PROFILE.md`
+- Decisions: `docs/project/DECISIONS.md`
+
+## Read first
+
+1. Read this file and the nearest nested `AGENTS.md` before changing files.
+2. Inspect Git status and relevant existing patterns.
+3. For a feature, work from an approved specification and plan in `docs/specs/` and `docs/plans/`.
+
+## Commands
+
+Use only commands verified in the repository. Record them in `docs/project/PROJECT_PROFILE.md`; do not invent a command here.
+
+## Safety boundaries
+
+- Do not read or print secrets, `.env` values, private keys or production dumps.
+- Do not install dependencies, change infrastructure, run migrations, stage, commit, push or deploy without explicit approval.
+- Preserve unrelated user changes.
+- For a bounded code change: demonstrate RED when practical, make the smallest change, then run relevant checks.
+- Update documentation only after checks and independent review confirm the behavior.
+
+## Handoff
+
+Report verified evidence, changed files, checks run, remaining risks and the next approval required.
