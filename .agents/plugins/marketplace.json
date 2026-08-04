@@ -1,0 +1,20 @@
+{
+  "name": "matreshka",
+  "interface": {
+    "displayName": "Matreshka Plugins"
+  },
+  "plugins": [
+    {
+      "name": "matreshka-project-start",
+      "source": {
+        "source": "local",
+        "path": "./plugins/matreshka-project-start"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
