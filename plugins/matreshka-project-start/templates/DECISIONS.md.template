@@ -1,0 +1,5 @@
+# Decisions
+
+| Date | Decision | Source | Consequence / open question |
+| --- | --- | --- | --- |
+| YYYY-MM-DD | Example: setup is documentation-only in the first phase | Owner confirmation | CI and runtime setup are deferred |
